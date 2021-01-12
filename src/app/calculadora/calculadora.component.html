@@ -32,10 +32,10 @@
        <h3>Resultado do IMC</h3>
        
        <p>
-          O seu IMC corporal é : 29.5
+          O seu IMC corporal é : {{imcCorporal}} .
        </p>
        <p>
-          Para a sua idade o resultado 29.5 da massa adquirida esta dentro do esperado.
+          Para a sua idade {{idade}} anos o você foi classificado com o peso {{mensagemUsuario}}.
        </p>
       </div>
     </div>
@@ -45,7 +45,7 @@
     <!-- botoes -->
     <hr class="linha"/>
     <div class="alinha-btn">
-      <button type="button" class="btn" (click)="findImc()">Calcular</button>
+      <button type="button" class="btn" (click)="encontraImc()">Calcular</button>
       <button type="reset" class="btn m-left">Limpar</button>
     </div>
 </form>
