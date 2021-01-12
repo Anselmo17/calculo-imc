@@ -39,17 +39,18 @@ export class CalculadoraComponent implements OnInit {
   mensagemImcCorporal(imc) {
 
     let resultado;
-    switch (imc) {
-      case imc > 18.5: resultado = 'magreza';
-        break;
-      case imc >= 25 || imc <= 29.9: resultado = 'sobrepeso';
-        break;
-      case imc >= 30 || imc <= 39.9: resultado = 'Obesidade';
-        break;
-      case imc > 40: resultado = 'Obesidade';
-        break;
-      default: resultado = 'normal';
-    }
+    
+      if(imc < 18.5)
+        resultado = 'magreza';
+      else if(imc >= 25 && imc <= 29.9)
+        resultado = 'sobrepeso';
+      else if(imc >= 30 && imc <= 39.9)
+        resultado = 'Obesidade';
+      else if(imc > 40)
+        resultado = 'Obesidade Grave';
+      else 
+        resultado = 'normal';
+    
     return resultado;
   }
 
