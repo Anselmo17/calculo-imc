@@ -1,0 +1,29 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: url('../assets/img/fundo.jpg');
+}
+
+.title {
+  padding-top: 0;
+  color: white;
+  font-size: 26px;
+  align-items: center;
+  justify-items: center;
+}
+
+h1 {
+  padding: 20px 0 20px 0;
+  text-align: center;
+  background-color: #3c4f5f;
+  font-size: 1.25em;
+  width: 100%;
+  border-radius: 2em;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}

@@ -1,0 +1,51 @@
+<form >
+ <div>
+   <h2 class="t-align-c">Adicione os dados</h2>
+ </div>
+ 
+  <hr class="linha"/>
+
+  <div class="linha-perguntas">
+  <div class="lista-perguntas">
+    <div class="m-botton perguntas">
+        <label>Qual a sua idade ? </label>
+        <br/>
+        <input placeholder="Digite sua idade..." [(ngModel)]="idade" minlength="3" maxlength="3" type="number" name="idade" />
+      </div>
+
+      <div class="m-botton perguntas">
+        <label>Qual a sua altura ? </label>
+        <br/>
+        <input placeholder="Digite sua altura..." maxlength="4" [(ngModel)]="altura" name="altura" (keyup)="validaCampo($event)" type="text"/>
+      </div>
+
+      <div class="m-botton perguntas">
+        <label>Qual o seu peso ? </label>
+        <br/>
+        <input placeholder="Digite seu peso..." [(ngModel)]="peso" name="peso" maxlength="3" type="text"/>
+      </div>
+  </div>
+    
+    <div class="dados">
+       <!-- mostra os dados -->
+      <div class="dados-usuario">
+       <h3>Resultado do IMC</h3>
+       
+       <p>
+          O seu IMC corporal é : 29.5
+       </p>
+       <p>
+          Para a sua idade o resultado 29.5 da massa adquirida esta dentro do esperado.
+       </p>
+      </div>
+    </div>
+  </div>
+  
+   
+    <!-- botoes -->
+    <hr class="linha"/>
+    <div class="alinha-btn">
+      <button type="button" class="btn" (click)="findImc()">Calcular</button>
+      <button type="reset" class="btn m-left">Limpar</button>
+    </div>
+</form>
