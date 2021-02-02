@@ -22,21 +22,24 @@
       <div class="m-botton perguntas">
         <label>Qual o seu peso ? </label>
         <br/>
-        <input placeholder="Digite seu peso..." [(ngModel)]="peso" name="peso" maxlength="3" type="text"/>
+        <input placeholder="Digite seu peso..." maxlength="4" [(ngModel)]="peso" (keyup)="validaPeso($event)" name="peso" type="text"/>
       </div>
   </div>
     
     <div class="dados">
        <!-- mostra os dados -->
-      <div class="dados-usuario">
-       <h3>Resultado do IMC</h3>
-       
-       <p>
-          O seu indice corporal é : {{imcCorporal}} .
-       </p>
-       <p>
-          Para a sua idade {{idade}} anos você foi classificado com peso {{mensagemUsuario}}.
-       </p>
+       <div class="dados-usuario" *ngIf="!resultImc">
+        <h3>Nenhum Imc a ser mostrado</h3>  
+      </div>
+
+      <div class="dados-usuario" *ngIf="resultImc">
+        <h3>Resultado do IMC</h3>  
+        <p>
+            O seu indice corporal é : {{imcCorporal}}.
+        </p>
+        <p>
+            Para a sua idade {{idade}} anos você foi classificado com peso {{mensagemUsuario}}.
+        </p>
       </div>
     </div>
   </div>
