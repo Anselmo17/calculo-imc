@@ -29,16 +29,18 @@
     <div class="dados">
        <!-- mostra os dados -->
        <div class="dados-usuario" *ngIf="!resultImc">
-        <h3>Nenhum Imc a ser mostrado</h3>  
+        <h3>Nenhum Imc a ser mostrado.</h3>  
       </div>
 
       <div class="dados-usuario" *ngIf="resultImc">
         <h3>Resultado do IMC</h3>  
         <p>
-            O seu indice corporal é : {{imcCorporal}}.
+            O seu indice corporal é : 
+            <strong>{{imcCorporal}}</strong>.
         </p>
         <p>
-            Para a sua idade {{idade}} anos você foi classificado com peso {{mensagemUsuario}}.
+            Para a sua idade <strong>{{idade}}</strong> anos você foi classificado com peso 
+            <strong>{{mensagemUsuario}}</strong>.
         </p>
       </div>
     </div>
@@ -49,6 +51,6 @@
     <hr class="linha"/>
     <div class="alinha-btn">
       <button type="button" class="btn" (click)="encontraImc()">Calcular</button>
-      <button type="reset" class="btn m-left">Limpar</button>
+      <button type="reset" class="btn m-left" (click)="limparImc()" >Limpar</button>
     </div>
 </form>

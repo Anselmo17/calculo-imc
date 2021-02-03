@@ -74,4 +74,8 @@ export class CalculadoraComponent implements OnInit {
   }
 
 
+
+limparImc(){
+  this.resultImc = false;
+}
 }
