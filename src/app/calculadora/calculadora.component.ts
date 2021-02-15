@@ -1,11 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ImplicitReceiver} from '@angular/compiler';
 
-@Component({
-  selector: 'app-calculadora', 
-  templateUrl: './calculadora.component.html', 
-  styleUrls: ['./calculadora.component.css'
-]})
+@Component({selector: 'app-calculadora', templateUrl: './calculadora.component.html', styleUrls: ['./calculadora.component.css']})
 export class CalculadoraComponent implements OnInit {
 
   peso : number;
@@ -69,13 +65,11 @@ export class CalculadoraComponent implements OnInit {
      else 
       resultado = 'Normal';
     
-
     return resultado;
   }
 
 
-
-limparImc(){
-  this.resultImc = false;
-}
+  limparImc() {
+    this.resultImc = false;
+  }
 }
