@@ -10,19 +10,36 @@
     <div class="m-botton perguntas">
         <label>Qual a sua idade ? </label>
         <br/>
-        <input placeholder="Digite sua idade..." [(ngModel)]="idade" minlength="3" maxlength="3" type="number" name="idade" />
+        
+        <input 
+          placeholder="Digite sua idade..." 
+          [(ngModel)]="idade" minlength="3" 
+          maxlength="3" 
+          type="number" 
+          name="idade" />
       </div>
 
       <div class="m-botton perguntas">
         <label>Qual a sua altura ? </label>
         <br/>
-        <input placeholder="Digite sua altura..." maxlength="4" [(ngModel)]="altura" name="altura" (keyup)="validaCampo($event)" type="text"/>
+        <input 
+            placeholder="Digite sua altura..."
+             maxlength="4" 
+            [(ngModel)]="altura" name="altura" 
+            (keyup)="validaCampo($event)" type="text"/>
       </div>
 
       <div class="m-botton perguntas">
         <label>Qual o seu peso ? </label>
         <br/>
-        <input placeholder="Digite seu peso..." maxlength="4" [(ngModel)]="peso" (keyup)="validaPeso($event)" name="peso" type="text"/>
+
+        <input 
+          placeholder="Digite seu peso..." 
+          maxlength="4" 
+          [(ngModel)]="peso" 
+          (keyup)="validaPeso($event)" 
+          name="peso" 
+          type="text"/>
       </div>
   </div>
     
@@ -39,7 +56,8 @@
             <strong>{{imcCorporal}}</strong>.
         </p>
         <p>
-            Para a sua idade <strong>{{idade}}</strong> anos você foi classificado com peso 
+            Para a sua idade <strong>{{idade}}</strong> 
+            anos você foi classificado com peso 
             <strong>{{mensagemUsuario}}</strong>.
         </p>
       </div>
