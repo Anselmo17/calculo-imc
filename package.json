@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve --open",
     "build": "ng build",
-    "test": "jest --watchAll --collectCoverage",
-    "testUnit":"jest calculadora.component.spec --collectCoverage",
+    "test": "jest --watchAll --no-cache --collectCoverage",
+    "testUnit":"jest calculadora.component.spec --watch --no-cache --collectCoverage",
     "test-watch": "jest --watch",
     "lint": "ng lint",
     "e2e": "ng e2e"
