@@ -14,9 +14,11 @@
         <input 
           placeholder="Digite sua idade..." 
           [(ngModel)]="idade" minlength="3" 
-          maxlength="3" 
-          type="number" 
-          name="idade" />
+          maxlength="2" 
+          type="txt" 
+          name="idade" 
+          (keyup)="limiteIdade($event)"
+          />
       </div>
 
       <div class="m-botton perguntas">

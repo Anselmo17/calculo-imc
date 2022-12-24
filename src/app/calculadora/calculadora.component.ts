@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ImplicitReceiver} from '@angular/compiler';
 
 @Component({selector: 'app-calculadora', templateUrl: './calculadora.component.html', styleUrls: ['./calculadora.component.css']})
 export class CalculadoraComponent implements OnInit {
@@ -68,6 +67,10 @@ export class CalculadoraComponent implements OnInit {
     return resultado;
   }
 
+  limiteIdade(event){
+    const field = event.target.value.replace(/\D/g, '');
+    this.idade = field;
+  }
 
   limparImc() {
     this.resultImc = false;
