@@ -1,5 +1,6 @@
 {
   "extends": "./tsconfig.json",
+  "lib": ["jest"],
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
@@ -9,10 +10,12 @@
   },
   "files": [
     "src/test.ts",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
   ],
   "include": [
     "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "src/**/*test.ts"
   ]
 }
