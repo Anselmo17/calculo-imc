@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-@Component({selector: 'app-calculadora', templateUrl: './calculadora.component.html', styleUrls: ['./calculadora.component.css']})
+@Component({ selector: 'app-calculadora', templateUrl: './calculadora.component.html', styleUrls: ['./calculadora.component.css'] })
 export class CalculadoraComponent implements OnInit {
 
   peso: number;
@@ -11,9 +11,9 @@ export class CalculadoraComponent implements OnInit {
   resultImc = false;
 
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 
   encontraImc() {
@@ -27,29 +27,25 @@ export class CalculadoraComponent implements OnInit {
     this.resultImc = true;
   }
 
-  validaCampo(event) {
+  validaCampo(event: any) {
     const field = event.target.value.replace(/,/g, '').replace(/\D/g, '');
-    const formatField = field.length > 1 ? `${
-      field[0]
-    },` + field.substring(1, field.length) : field;
+    const formatField = field.length > 1 ? `${field[0]
+      },` + field.substring(1, field.length) : field;
 
-    const name = event.target.name;
-    this[name] = formatField;
+    this.altura = formatField;
     return formatField;
   }
 
-  validaPeso(event) {
+  validaPeso(event: any) {
     const field = event.target.value.replace(/\D/g, '');
-    const formatField = field.length > 2 ? `${
-      field[0] + field[1]
-    },` + field.substring(2, field.length) : field;
+    const formatField = field.length > 2 ? `${field[0] + field[1]
+      },` + field.substring(2, field.length) : field;
 
-    const name = event.target.name;
-    this[name] = formatField;
+    this.peso = formatField;
     return formatField;
   }
 
-  mensagemImcCorporal(imc) {
+  mensagemImcCorporal(imc: any) {
 
     let resultado;
 
@@ -67,7 +63,7 @@ export class CalculadoraComponent implements OnInit {
     return resultado;
   }
 
-  limiteIdade(event){
+  limiteIdade(event: any) {
     const field = event.target.value.replace(/\D/g, '');
     this.idade = field;
   }
